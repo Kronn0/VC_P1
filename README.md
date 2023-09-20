@@ -17,9 +17,9 @@ En este cuaderno hemos realizado las siguientes tareas:
 **1. Crear una imagen de tamaño 800x800 con la textura de tablero de ajedrez**
 
 Para ello hemos de saber de cuanto es un tablero de ajedrez, para poder dividir el canvas y así dibujar los cuadrados
-Segun Wikipedia (https://es.wikipedia.org/wiki/Tablero_de_damas_y_ajedrez) es un 8x8, bastante conveniente porque podemos hacer que los cuadrados sean de 100x100 y así poder dividir el tablero
-primero debemos hacer un canvas de 800x800 y pintarlo de negro. luego dividimos el tablero en 8x8 y lo recorremos con un doble bucle.
-Cuando encuentre una celda donde la suma de la fila y la de la columna den un numero par entonces rellenamos desde la esquina  de la fila anterior y la columa anterior hasta la esquina actual.
+Segun Wikipedia (https://es.wikipedia.org/wiki/Tablero_de_damas_y_ajedrez) es un 8x8, bastante conveniente porque podemos hacer un array de dichas celdas y rellenarlas a la vez que se recorren.
+
+Primero debemos hacer un canvas y pintarlo de negro. Luego, recorremos el array con dos bucles, uno que avance desde la posición cero aumentando de dos en dos, y otro que empiece desde la posición uno, aumentando de dos en dos también. Así se conseguirá pintar los cuadrados de forma alterna y conseguir nuestro tablero de ajedrez.
 
 **2. Crear una imagen estilo Mondrian (ejemplo https://www3.gobiernodecanarias.org/medusa/ecoescuela/sa/2017/04/17/descubriendo-a-mondrian/)**
 
@@ -42,7 +42,7 @@ Fuente de la idea: https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.ht
 
 Para ello vamos a sub-dividir el problema en dos, en encontrar un solo pixel y el de encontrar la zona 8x8. 
 
-Para el primer problema pues pasamos el frame de la camara a una escala de gris, para encontrar cual pixel es más oscuro o más claro. Luego usamos una fución de OpenCV llamada "minMaxLoc" Que localiza el valor máximo y minimo de un pixel en la imagen y donde se localiza en esa imagen. Luego con OpenCV pintamos donde haya localizado el pixel más oscuro un circulo negro de radio 3 y relleno, y lo mismo pero con un circulo blanco para el pixel más claro. 
+Para el primer problema pues pasamos el frame de la camara a una escala de gris, para encontrar cual pixel es más oscuro o más claro. Luego usamos una fución de OpenCV llamada "minMaxLoc" Que localiza el valor máximo y minimo de un pixel en la imagen y donde se localiza en esa imagen. Luego con OpenCV pintamos donde haya localizado el pixel más oscuro un circulo negro de radio 3 y relleno, y lo mismo pero con un circulo blanco para el pixel más claro. También se ha añadido un método que su función es comparar pixel a pixel la imagen y guardar el que tenga el mayor y menos valor a la vez que su posición. 
 
 Para el segundo problema debemos de recorrer la imagen de una manera más manual, primero debemos de pasar el frame a escala de gris nuevamente. sacamos las dimensiones del frame, definimos el tamaño de la zona que queremos encontrar, este caso 8 (8x8), declaramos la intensidad minima de la zona como infinity ya que cualquier pixel va a ser siempre más pequeño que esta y la intensidad maxima de la zona como -1 porque cualquier pixel va a ser mayor que ella. Luego definimos variables de coordenadas para el maximo y el minimo. 
 
