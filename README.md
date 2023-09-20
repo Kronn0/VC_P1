@@ -9,7 +9,7 @@ En este cuaderno hemos realizado las siguientes tareas:
 **6. Una propuesta de pop Art**
 
 
-1. Crear una imagen de tamaño 800x800 con la textura de tablero de ajedrez
+**1. Crear una imagen de tamaño 800x800 con la textura de tablero de ajedrez**
 
 Para ello hemos de saber de cuanto es un tablero de ajedrez, para poder dividir el canvas y así dibujar los cuadrados
 Segun Wikipedia (https://es.wikipedia.org/wiki/Tablero_de_damas_y_ajedrez) es un 8x8, bastante conveniente porque podemos hacer que los cuadrados sean de 100x100 y así poder dividir el tablero
@@ -28,7 +28,7 @@ Como la tarea 2 ya se hizo con OpenCV se decidio hacer la primera nuevamente. Pa
 
 **4. Modificar de alguna forma los valores de un plano de la imagen**
 
-
+Basicamente hemos cogido el codigo anterior y hemos invertido los canales de colores del rgb.
 
 **5. Pintar círculos en las posiciones del píxel más claro y oscuro de la imagen y hacerlo con las zonas más oscura y clara 8x8**
 
@@ -44,3 +44,4 @@ Una vez acabado el doble bucle. Pintamos el circulo negro donde las coordenadas 
 
 **6. Una propuesta de pop Art**
 
+Basicamente hemos cogido el del ejemplo anterior y lo hemos retocado para que el frame nuevo en vez de ser solo blanco y negro pueda aceptar más colores y hemos cogido una paleta de colores de pop art y lo hemos implementado en este para que el fondo y los dots sean de diferentes colores. 
