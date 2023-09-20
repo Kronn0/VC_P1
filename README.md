@@ -53,3 +53,5 @@ Una vez acabado el doble bucle. Pintamos el circulo negro donde las coordenadas 
 **6. Una propuesta de pop Art**
 
 Basicamente hemos cogido el del ejemplo anterior y lo hemos retocado para que el frame nuevo en vez de ser solo blanco y negro pueda aceptar más colores y hemos cogido una paleta de colores de pop art y lo hemos implementado en este para que el fondo y los dots sean de diferentes colores. 
+
+fuente de los colores: https://www.schemecolor.com/pop-art.php
